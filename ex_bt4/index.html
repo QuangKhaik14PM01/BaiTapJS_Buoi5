@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính tiền cáp</title>
+</head>
+<body>
+
+    <h1>Ứng dụng tính hóa đơn cáp</h1>
+
+    <label for="maKhachHang">Mã khách hàng:</label>
+    <input type="text" id="maKhachHang"><br>
+
+    <label for="loaiKhachHang">Loại khách hàng:</label>
+    <select id="loaiKhachHang" onchange="hienThiSoKetNoi()">
+        <option value="nhaDan">Nhà dân</option>
+        <option value="doanhNghiep">Doanh nghiệp</option>
+    </select><br>
+
+    <div id="soKetNoiDiv">
+        <label for="soKetNoi">Số kết nối:</label>
+        <input type="number" id="soKetNoi" min="0"><br>
+    </div>
+
+    <label for="soKenhCaoCap">Số kênh cao cấp:</label>
+    <input type="number" id="soKenhCaoCap" min="0"><br>
+
+    <button onclick="tinhHoaDon()">Tính hóa đơn</button>
+
+    <h2>Kết quả:</h2>
+    <p id="ketQua"></p>
+    <!-- myjs -->
+    <script src="./index.js"></script>
+</body>
+</html>
